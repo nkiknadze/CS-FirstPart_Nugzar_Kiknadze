@@ -1,0 +1,14 @@
+C:\Users\nkiknadze\source\repos\Calculator\ATMMachine\bin\Debug\net8.0\ATMMachine.exe
+C:\Users\nkiknadze\source\repos\Calculator\ATMMachine\bin\Debug\net8.0\ATMMachine.deps.json
+C:\Users\nkiknadze\source\repos\Calculator\ATMMachine\bin\Debug\net8.0\ATMMachine.runtimeconfig.json
+C:\Users\nkiknadze\source\repos\Calculator\ATMMachine\bin\Debug\net8.0\ATMMachine.dll
+C:\Users\nkiknadze\source\repos\Calculator\ATMMachine\bin\Debug\net8.0\ATMMachine.pdb
+C:\Users\nkiknadze\source\repos\Calculator\ATMMachine\obj\Debug\net8.0\ATMMachine.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nkiknadze\source\repos\Calculator\ATMMachine\obj\Debug\net8.0\ATMMachine.AssemblyInfoInputs.cache
+C:\Users\nkiknadze\source\repos\Calculator\ATMMachine\obj\Debug\net8.0\ATMMachine.AssemblyInfo.cs
+C:\Users\nkiknadze\source\repos\Calculator\ATMMachine\obj\Debug\net8.0\ATMMachine.csproj.CoreCompileInputs.cache
+C:\Users\nkiknadze\source\repos\Calculator\ATMMachine\obj\Debug\net8.0\ATMMachine.dll
+C:\Users\nkiknadze\source\repos\Calculator\ATMMachine\obj\Debug\net8.0\refint\ATMMachine.dll
+C:\Users\nkiknadze\source\repos\Calculator\ATMMachine\obj\Debug\net8.0\ATMMachine.pdb
+C:\Users\nkiknadze\source\repos\Calculator\ATMMachine\obj\Debug\net8.0\ATMMachine.genruntimeconfig.cache
+C:\Users\nkiknadze\source\repos\Calculator\ATMMachine\obj\Debug\net8.0\ref\ATMMachine.dll

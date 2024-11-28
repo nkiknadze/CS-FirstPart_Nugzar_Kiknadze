@@ -1,0 +1,14 @@
+C:\Users\nkiknadze\source\repos\Calculator\StudentsControll\bin\Debug\net8.0\StudentsControll.exe
+C:\Users\nkiknadze\source\repos\Calculator\StudentsControll\bin\Debug\net8.0\StudentsControll.deps.json
+C:\Users\nkiknadze\source\repos\Calculator\StudentsControll\bin\Debug\net8.0\StudentsControll.runtimeconfig.json
+C:\Users\nkiknadze\source\repos\Calculator\StudentsControll\bin\Debug\net8.0\StudentsControll.dll
+C:\Users\nkiknadze\source\repos\Calculator\StudentsControll\bin\Debug\net8.0\StudentsControll.pdb
+C:\Users\nkiknadze\source\repos\Calculator\StudentsControll\obj\Debug\net8.0\StudentsControll.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nkiknadze\source\repos\Calculator\StudentsControll\obj\Debug\net8.0\StudentsControll.AssemblyInfoInputs.cache
+C:\Users\nkiknadze\source\repos\Calculator\StudentsControll\obj\Debug\net8.0\StudentsControll.AssemblyInfo.cs
+C:\Users\nkiknadze\source\repos\Calculator\StudentsControll\obj\Debug\net8.0\StudentsControll.csproj.CoreCompileInputs.cache
+C:\Users\nkiknadze\source\repos\Calculator\StudentsControll\obj\Debug\net8.0\StudentsControll.dll
+C:\Users\nkiknadze\source\repos\Calculator\StudentsControll\obj\Debug\net8.0\refint\StudentsControll.dll
+C:\Users\nkiknadze\source\repos\Calculator\StudentsControll\obj\Debug\net8.0\StudentsControll.pdb
+C:\Users\nkiknadze\source\repos\Calculator\StudentsControll\obj\Debug\net8.0\StudentsControll.genruntimeconfig.cache
+C:\Users\nkiknadze\source\repos\Calculator\StudentsControll\obj\Debug\net8.0\ref\StudentsControll.dll
