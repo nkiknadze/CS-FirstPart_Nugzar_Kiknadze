@@ -1,0 +1,38 @@
+﻿@model BakurianiBooking.Models.DTOs.RoomDetailsDto
+
+@{
+    ViewData["Title"] = "Room Details";
+    string imageFolderPath = "/images/rooms/";
+}
+
+<h1>Room Details</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.HotelId)</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.HotelId)</dd>
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Name)</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Name)</dd>
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Description)</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Description)</dd>
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Price)</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Price)</dd>
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Created)</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Created)</dd>
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.ImageUrl)</dt>
+        <td>
+            @if (Model.RoomImages != null && Model.RoomImages.Any())
+            {
+                @foreach (var image in Model.RoomImages.Take(3))
+                {
+                    <img src="@(imageFolderPath + image.ImageUrl)" alt="Room Image" style="max-width: 200px; max-height: 200px; margin-right: 5px;" />
+                }
+            }
+        </td>
+    </dl>
+</div>
+<div>
+    <a asp-action="HotelRooms" asp-controller="Rooms" asp-route-id="@Model.HotelId">Back to Rooms</a> |
+    <a asp-action="Index" asp-controller="Hotels">Back to Hotels</a>
+</div>

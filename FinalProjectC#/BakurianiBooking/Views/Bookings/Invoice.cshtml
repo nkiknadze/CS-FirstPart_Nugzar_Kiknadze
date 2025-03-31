@@ -1,0 +1,41 @@
+﻿@model BakurianiBooking.Models.Entities.Booking
+
+@{
+    ViewData["Title"] = "Invoice";
+}
+
+<h1>Invoice</h1>
+
+<div>
+    <h4>Booking Details</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>Hotel Name</dt>
+        <dd>@Model.Hotel?.Name</dd>
+        <dt>Room Name</dt>
+        <dd>@Model.Room?.Name</dd>
+        <dt>User Email</dt>
+        <dd>@ViewBag.UserEmail</dd>
+        <dt>Mobile</dt>
+        <dd>@Model.Mobile</dd>
+        <dt>Start Date</dt>
+        <dd>@Model.StartDate.ToString("dd/MM/yyyy")</dd>
+        <dt>End Date</dt>
+        <dd>@Model.EndDate.ToString("dd/MM/yyyy")</dd>
+        <dt>Price</dt>
+        <dd>@Model.Price</dd>
+        <dt>Days</dt>
+        <dd>@((Model.EndDate - Model.StartDate).Days)</dd>
+        <dt>Total Amount</dt>
+        <dd>@((Model.EndDate - Model.StartDate).Days * Model.Price)</dd>
+        <dt>Status</dt>
+        <dd>@Model.Status</dd>
+    </dl>
+</div>
+
+@if (Model.Status == "მომზადებული")
+{
+    <div>
+        <a asp-action="ConfirmPayment" asp-route-id="@Model.Id" class="btn btn-success">Confirm Payment</a>
+    </div>
+}

@@ -1,0 +1,75 @@
+﻿@model IEnumerable<BakurianiBooking.Models.Entities.Hotel>
+
+@{
+    ViewData["Title"] = "Hotels";
+    string imageFolderPath = "/images/hotels/";
+}
+
+<h1>Hotels</h1>
+
+
+
+@if (User.IsInRole("Admin"))
+{
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone)
+            </th>
+            <th>
+                Images
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @* <a asp-action="HotelRooms" asp-route-id="@item.Id">@item.Name</a> *@
+                    @* <a asp-action="Index" asp-controller="Rooms" asp-route-id="@item.Id">@item.Name</a> *@
+                    <a asp-action="HotelRooms" asp-controller="Rooms" asp-route-id="@item.Id">@item.Name</a>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.City)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Phone)
+                </td>
+                <td>
+                    @if (item.HotelImages != null && item.HotelImages.Any() && !string.IsNullOrEmpty(item.HotelImages.First().ImageUrl))
+                    {
+                        <img src="@(imageFolderPath + item.HotelImages.First().ImageUrl)" alt="Hotel Image" style="max-width: 100px; max-height: 100px;" />
+                    }
+                </td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> 
+                        @if(User.IsInRole("Admin"))
+                        {
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> 
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                        }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

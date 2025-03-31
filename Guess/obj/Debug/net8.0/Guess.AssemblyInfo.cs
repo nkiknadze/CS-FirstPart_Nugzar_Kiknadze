@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Guess")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+301757da6c9f6f009e3e67da50f1bcfcfded368a")]
 [assembly: System.Reflection.AssemblyProductAttribute("Guess")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Guess")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

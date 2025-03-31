@@ -1,0 +1,5 @@
+[თქვენი_აპლიკაციის_URL]/Account/AddAdminToUser?email=[მომხმარებლის_ელ_ფოსტა]
+
+
+
+[თქვენი_აპლიკაციის_URL]/Account/CreateAdminRole

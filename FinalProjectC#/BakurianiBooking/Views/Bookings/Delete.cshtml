@@ -1,0 +1,43 @@
+﻿@model BakurianiBooking.Models.Entities.Booking
+
+@{
+    ViewData["Title"] = "Delete Booking";
+}
+
+<h1>Delete Booking</h1>
+
+<h3>ნამდვილად გსურს წაშლა?</h3>
+
+<div>
+    <dl class="row">
+        <dt class="col-sm-2">Hotel Id</dt>
+        <dd class="col-sm-10">@Model.HotelId</dd>
+
+        <dt class="col-sm-2">Room Id</dt>
+        <dd class="col-sm-10">@Model.RoomId</dd>
+
+        <dt class="col-sm-2">User Id</dt>
+        <dd class="col-sm-10">@Model.IdentityUserId</dd>
+
+        <dt class="col-sm-2">Mobile</dt>
+        <dd class="col-sm-10">@Model.Mobile</dd>
+
+        <dt class="col-sm-2">Start Date</dt>
+        <dd class="col-sm-10">@Model.StartDate.ToString("yyyy-MM-dd")</dd>
+
+        <dt class="col-sm-2">End Date</dt>
+        <dd class="col-sm-10">@Model.EndDate.ToString("yyyy-MM-dd")</dd>
+
+        <dt class="col-sm-2">Price</dt>
+        <dd class="col-sm-10">@Model.Price</dd>
+
+        <dt class="col-sm-2">Status</dt>
+        <dd class="col-sm-10">@Model.Status</dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

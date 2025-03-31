@@ -1,0 +1,39 @@
+﻿.table {
+    font-size: 12px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    .table th, .table td {
+        padding: 5px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .table th {
+        background-color: #f2f2f2;
+    }
+
+    .table td:nth-child(2), /* Hotel Name სვეტი */
+    .table td:nth-child(4) { /* Room Name სვეტი */
+        max-width: 150px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+/* მცირე ეკრანებისთვის */
+@media (max-width: 768px) {
+    .table {
+        font-size: 10px;
+    }
+
+        .table td:nth-child(6), /* Mobile სვეტი */
+        .table td:nth-child(7), /* Start Date სვეტი */
+        .table td:nth-child(8), /* End Date სვეტი */
+        .table td:nth-child(9), /* Price სვეტი */
+        .table td:nth-child(10), /* Days სვეტი */
+        .table td:nth-child(11) { /* Total Price სვეტი */
+            display: none;
+        }
+}

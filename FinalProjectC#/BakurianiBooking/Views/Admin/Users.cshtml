@@ -1,0 +1,39 @@
+﻿@using BakurianiBooking.Models.Entities;
+@model List<BakurianiBooking.Models.Entities.UserViewModel>
+
+@{
+    ViewData["Title"] = "Users";
+}
+
+<div class="container mt-5">
+    <h1>Users</h1>
+
+@*     <div class="mb-3">
+        <a asp-action="CreateUser" class="btn btn-primary">Create New User</a>
+    </div> *@
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Email</th>
+                <th>Username</th>
+                <th>Roles</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var userViewModel in Model)
+            {
+                <tr>
+                    <td>@userViewModel.User.Email</td>
+                    <td>@userViewModel.User.UserName</td>
+                    <td>@string.Join(", ", userViewModel.Roles)</td>
+                    <td>
+                        <a asp-action="EditUser" asp-route-id="@userViewModel.User.Id" class="btn btn-sm btn-primary">Edit</a>
+                        <a asp-action="DeleteUser" asp-route-id="@userViewModel.User.Id" class="btn btn-sm btn-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

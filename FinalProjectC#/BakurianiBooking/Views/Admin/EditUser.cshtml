@@ -1,0 +1,52 @@
+﻿@model Microsoft.AspNetCore.Identity.IdentityUser
+
+@{
+    ViewData["Title"] = "Edit User";
+    var userRoles = (List<string>)ViewBag.UserRoles;
+    var allRoles = (List<Microsoft.AspNetCore.Identity.IdentityRole>)ViewBag.AllRoles;
+}
+
+<h1>Edit User</h1>
+
+<form asp-action="EditUser" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group">
+        <label asp-for="UserName" class="control-label"></label>
+        <input asp-for="UserName" class="form-control" />
+        <span asp-validation-for="UserName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Email" class="control-label"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Roles</label>
+        @for (int i = 0; i < allRoles.Count; i++)
+        {
+            <div class="form-check">
+                <input type="checkbox" name="selectedRoles" value="@allRoles[i].Name" class="form-check-input"
+                @(userRoles.Contains(allRoles[i].Name) ? "checked" : "") />
+                <label class="form-check-label">@allRoles[i].Name</label>
+            </div>
+        }
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-primary" />
+    </div>
+</form>
+
+<div>
+    <a asp-action="Users">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

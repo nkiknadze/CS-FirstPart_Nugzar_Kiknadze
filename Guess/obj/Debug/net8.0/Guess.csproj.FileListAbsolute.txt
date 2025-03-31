@@ -12,3 +12,18 @@ C:\Users\nkiknadze\source\repos\Calculator\Guess\obj\Debug\net8.0\refint\Guess.d
 C:\Users\nkiknadze\source\repos\Calculator\Guess\obj\Debug\net8.0\Guess.pdb
 C:\Users\nkiknadze\source\repos\Calculator\Guess\obj\Debug\net8.0\Guess.genruntimeconfig.cache
 C:\Users\nkiknadze\source\repos\Calculator\Guess\obj\Debug\net8.0\ref\Guess.dll
+C:\Users\nkiknadze\Desktop\C# Course\TestN1\Calculator\Guess\bin\Debug\net8.0\Guess.exe
+C:\Users\nkiknadze\Desktop\C# Course\TestN1\Calculator\Guess\bin\Debug\net8.0\Guess.deps.json
+C:\Users\nkiknadze\Desktop\C# Course\TestN1\Calculator\Guess\bin\Debug\net8.0\Guess.runtimeconfig.json
+C:\Users\nkiknadze\Desktop\C# Course\TestN1\Calculator\Guess\bin\Debug\net8.0\Guess.dll
+C:\Users\nkiknadze\Desktop\C# Course\TestN1\Calculator\Guess\bin\Debug\net8.0\Guess.pdb
+C:\Users\nkiknadze\Desktop\C# Course\TestN1\Calculator\Guess\obj\Debug\net8.0\Guess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nkiknadze\Desktop\C# Course\TestN1\Calculator\Guess\obj\Debug\net8.0\Guess.AssemblyInfoInputs.cache
+C:\Users\nkiknadze\Desktop\C# Course\TestN1\Calculator\Guess\obj\Debug\net8.0\Guess.AssemblyInfo.cs
+C:\Users\nkiknadze\Desktop\C# Course\TestN1\Calculator\Guess\obj\Debug\net8.0\Guess.csproj.CoreCompileInputs.cache
+C:\Users\nkiknadze\Desktop\C# Course\TestN1\Calculator\Guess\obj\Debug\net8.0\Guess.sourcelink.json
+C:\Users\nkiknadze\Desktop\C# Course\TestN1\Calculator\Guess\obj\Debug\net8.0\Guess.dll
+C:\Users\nkiknadze\Desktop\C# Course\TestN1\Calculator\Guess\obj\Debug\net8.0\refint\Guess.dll
+C:\Users\nkiknadze\Desktop\C# Course\TestN1\Calculator\Guess\obj\Debug\net8.0\Guess.pdb
+C:\Users\nkiknadze\Desktop\C# Course\TestN1\Calculator\Guess\obj\Debug\net8.0\Guess.genruntimeconfig.cache
+C:\Users\nkiknadze\Desktop\C# Course\TestN1\Calculator\Guess\obj\Debug\net8.0\ref\Guess.dll

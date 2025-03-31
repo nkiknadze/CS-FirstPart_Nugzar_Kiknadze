@@ -1,0 +1,65 @@
+﻿@model List<BakurianiBooking.Models.Entities.Room>
+
+@{
+    ViewData["Title"] = "Hotel Rooms";
+    ViewData["Title"] = "Rooms";
+    string imageFolderPath = "/images/rooms/";
+}
+
+<h1>Hotel Rooms</h1>
+
+@if (ViewBag.HotelId != null)
+{
+    <p>
+        <a asp-action="Create" asp-controller="Rooms" asp-route-id="@ViewBag.HotelId">Add New Room</a>
+    </p>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Room Number</th>
+            <th>Room Name</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Images</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var room in Model)
+        {
+            <tr>
+                <td>@room.Id</td>
+                <td >
+                    <a asp-action="Create" asp-controller="Bookings" asp-route-roomId="@room.Id" asp-route-hotelId="@room.HotelId">@room.Name</a>
+                </td>
+                <td>@room.Price</td>
+                <td>
+                    <div style="max-width: 200px; overflow: hidden; text-overflow: ellipsis;">
+                        @Html.DisplayFor(modelItem => room.Description)
+                    </div>
+                </td>
+                <td>
+                    @if (room.RoomImages != null && room.RoomImages.Any())
+                    {
+                        @foreach (var image in room.RoomImages.Take(3))
+                        {
+                            <img src="@(imageFolderPath + image.ImageUrl)" alt="Room Image" style="max-width: 200px; max-height: 200px; margin-right: 5px;" />
+                        }
+                    }
+                </td>
+                <td>
+                <td>
+                    <a asp-action="Details" asp-controller="Rooms" asp-route-id="@room.Id">Details</a> |
+                    <a asp-action="Edit" asp-controller="Rooms" asp-route-id="@room.Id">Edit</a> |
+                    <a asp-action="Delete" asp-controller="Rooms" asp-route-id="@room.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<p>
+    <a asp-action="Index" asp-controller="Hotels">Back to Hotels</a>
+</p>

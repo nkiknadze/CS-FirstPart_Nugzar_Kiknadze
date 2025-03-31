@@ -1,0 +1,81 @@
+﻿@model List<BakurianiBooking.Models.Entities.Room>
+
+@{
+    ViewData["Title"] = "Rooms";
+    string imageFolderPath = "/images/rooms/";
+}
+
+<h1>Rooms</h1>
+
+@if (ViewBag.HotelId != null)
+{
+    @if(User.IsInRole("Admin"))
+    {
+        <p>
+            <a asp-action="Create" asp-controller="Rooms" asp-route-id="@ViewBag.HotelId">Add New Room</a>
+        </p>
+    }
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>HotelId</th>
+            <th>Hotel Name</th>
+            <th>Room Name</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Images</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var room in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => room.HotelId)</td>
+                @* <td>@room.Hotel?.Name</td> *@
+                
+                <td>
+                    <a asp-action="HotelRooms" asp-controller="Rooms" asp-route-id="@room.HotelId" asp-route-hotelId="@room.HotelId">@room.Hotel?.Name</a>
+                </td>
+
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <td>
+                        <a asp-action="Create" asp-controller="Bookings" asp-route-roomId="@room.Id" asp-route-hotelId="@room.HotelId">@room.Name</a>
+                    </td>
+                }
+                else
+                {
+                    <td>
+                        <a asp-action="Login" asp-controller="Account" asp-route-returnUrl="@Context.Request.Path@Context.Request.QueryString">@room.Name (Login to book)</a>
+                    </td>
+                }
+                <td>@Html.DisplayFor(modelItem => room.Price)</td>
+                <td>
+                    <div style="max-width: 200px; overflow: hidden; text-overflow: ellipsis;">
+                        @Html.DisplayFor(modelItem => room.Description)
+                    </div>
+                </td>
+                <td>
+                    @if (room.RoomImages != null && room.RoomImages.Any())
+                    {
+                        @foreach (var image in room.RoomImages.Take(3))
+                        {
+                            <img src="@(imageFolderPath + image.ImageUrl)" alt="Room Image" style="max-width: 200px; max-height: 200px; margin-right: 5px;" />
+                        }
+                    }
+                </td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@room.Id">Details</a>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <a asp-action="Edit" asp-route-id="@room.Id">Edit</a>
+                        <a asp-action="Delete" asp-route-id="@room.Id">Delete</a>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -5,7 +5,7 @@ using System.IO;
 namespace ATM_ConsoleApp
 {
 
-    //გადარიცხვის ნაწილი რომ დავამატო. ლოგში შევუშა. მიმღები უნდა გვყავდეს იუზერების ნაწილშ და შევხედოთ ID ით.
+    
     class Program
     {
         // filebis paths

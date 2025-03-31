@@ -3,7 +3,19 @@
   "WorkspaceRootPath": "C:\\Users\\nkiknadze\\Desktop\\C# Course\\TestN1\\Calculator\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{84373528-4B3B-4A64-A9A0-7263F86BF513}|Calculator\\Calculator.csproj|c:\\users\\nkiknadze\\desktop\\c# course\\testn1\\calculator\\calculator\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{A57A3D71-3A1E-42C8-9447-80A2F527E4C4}|ATMMachine\\ATMMachine.csproj|c:\\users\\nkiknadze\\desktop\\c# course\\testn1\\calculator\\atmmachine\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A57A3D71-3A1E-42C8-9447-80A2F527E4C4}|ATMMachine\\ATMMachine.csproj|solutionrelative:atmmachine\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84373528-4B3B-4A64-A9A0-7263F86BF513}|Calculator\\Calculator.csproj|c:\\users\\nkiknadze\\desktop\\c# course\\testn1\\calculator\\calculator\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84373528-4B3B-4A64-A9A0-7263F86BF513}|Calculator\\Calculator.csproj|solutionrelative:calculator\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84373528-4B3B-4A64-A9A0-7263F86BF513}|Calculator\\Calculator.csproj|c:\\users\\nkiknadze\\desktop\\c# course\\testn1\\calculator\\calculator\\calculator.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{84373528-4B3B-4A64-A9A0-7263F86BF513}|Calculator\\Calculator.csproj|solutionrelative:calculator\\calculator.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84373528-4B3B-4A64-A9A0-7263F86BF513}|Calculator\\Calculator.csproj|C:\\Users\\nkiknadze\\Desktop\\C# Course\\TestN1\\Calculator\\calculator\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{84373528-4B3B-4A64-A9A0-7263F86BF513}|Calculator\\Calculator.csproj|solutionrelative:calculator\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -14,23 +26,60 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\nkiknadze\\Desktop\\C# Course\\TestN1\\Calculator\\Calculator\\Form1.cs",
+              "RelativeDocumentMoniker": "Calculator\\Form1.cs",
+              "ToolTip": "C:\\Users\\nkiknadze\\Desktop\\C# Course\\TestN1\\Calculator\\Calculator\\Form1.cs",
+              "RelativeToolTip": "Calculator\\Form1.cs",
+              "ViewState": "AgIAAB0BAAAAAAAAAAAAAHYBAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T08:57:09.753Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Calculator.csproj",
+              "DocumentMoniker": "C:\\Users\\nkiknadze\\Desktop\\C# Course\\TestN1\\Calculator\\Calculator\\Calculator.csproj",
+              "RelativeDocumentMoniker": "Calculator\\Calculator.csproj",
+              "ToolTip": "C:\\Users\\nkiknadze\\Desktop\\C# Course\\TestN1\\Calculator\\Calculator\\Calculator.csproj",
+              "RelativeToolTip": "Calculator\\Calculator.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-12-06T08:56:30.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\nkiknadze\\Desktop\\C# Course\\TestN1\\Calculator\\Calculator\\Form1.cs",
               "RelativeDocumentMoniker": "Calculator\\Form1.cs",
               "ToolTip": "C:\\Users\\nkiknadze\\Desktop\\C# Course\\TestN1\\Calculator\\Calculator\\Form1.cs [Design]",
               "RelativeToolTip": "Calculator\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T14:43:57.122Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-28T15:26:41.706Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\nkiknadze\\Desktop\\C# Course\\TestN1\\Calculator\\ATMMachine\\Program.cs",
+              "RelativeDocumentMoniker": "ATMMachine\\Program.cs",
+              "ToolTip": "C:\\Users\\nkiknadze\\Desktop\\C# Course\\TestN1\\Calculator\\ATMMachine\\Program.cs",
+              "RelativeToolTip": "ATMMachine\\Program.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAFEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T15:19:26.692Z",
+              "EditorCaption": ""
             }
           ]
         }

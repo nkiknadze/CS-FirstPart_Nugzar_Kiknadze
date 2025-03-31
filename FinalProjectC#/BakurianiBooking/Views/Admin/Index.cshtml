@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Admin Panel";
+}
+
+<div class="container mt-5">
+    <h1>Admin Panel</h1>
+
+    <p>Welcome to the admin panel!</p>
+
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Users</h5>
+                    <p class="card-text">Manage users and their roles.</p>
+                    <a asp-action="Users" class="btn btn-primary">View Users</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Roles</h5>
+                    <p class="card-text">Manage roles and their permissions.</p>
+                    <a asp-action="Roles" class="btn btn-primary">View Roles</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Manage User Roles</h5>
+                    <p class="card-text">Manage users roles.</p>
+                    <a asp-action="Users" class="btn btn-primary">Manage User Roles</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

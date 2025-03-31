@@ -1,0 +1,32 @@
+﻿@model Microsoft.AspNetCore.Identity.IdentityUser
+
+@{
+    ViewData["Title"] = "Delete User";
+}
+
+<h1>Delete User</h1>
+
+<h3>Are you sure you want to delete the user "@Model.UserName" (@Model.Email)?</h3>
+
+<div>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+    </dl>
+
+    <form asp-action="DeleteUser" asp-route-id="@Model.Id" method="post">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Users" class="btn btn-secondary">View All Users</a>
+    </form>
+</div>

@@ -1,0 +1,95 @@
+﻿@model List<dynamic>
+@using System.Security.Claims
+
+@{
+    ViewData["Title"] = "Bookings";
+    string currentUserEmail = User.FindFirstValue(ClaimTypes.Email) ?? User.FindFirstValue("emailaddress");
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/bookings.css" />
+</head>
+
+<h1>Bookings</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>HotelId</th>
+            <th>Hotel Name</th>
+            <th>RoomId</th>
+            <th>Room Name</th>
+            <th>User Email</th>
+            <th>Mobile</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Price</th>
+            <th>Days</th>
+            <th>Total Price</th>
+            <th>Status</th>
+            <th>Actions</th>
+            <th>Invoice</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            var userEmail = ViewBag.UserEmails != null && ViewBag.UserEmails.ContainsKey(item.Booking.IdentityUserId)
+            ? ViewBag.UserEmails[item.Booking.IdentityUserId]
+            : "";
+
+            <tr>
+                <td>@item.Booking.HotelId</td>
+                <td>@(item.Booking.Hotel?.Name ?? "N/A")</td>
+                <td>@item.Booking.RoomId</td>
+                <td>@(item.Booking.Room?.Name ?? "N/A")</td>
+                <td>@userEmail</td>
+                <td>@(item.Booking.Mobile ?? "N/A")</td>
+                <td>@(item.Booking.StartDate != null ? item.Booking.StartDate.ToString("dd/MM/yyyy") : "N/A")</td>
+                <td>@(item.Booking.EndDate != null ? item.Booking.EndDate.ToString("dd/MM/yyyy") : "N/A")</td>
+                <td>@(item.Booking.Price?.ToString("C") ?? "0")</td>
+                <td>@item.Days</td>
+                <td>@(item.TotalAmount?.ToString("C") ?? "0")</td>
+                <td>@(item.Booking.Status ?? "N/A")</td>
+                <td>
+@*                     @if (userEmail == currentUserEmail && item.Booking.Status != "გადასახდელი" && !string.IsNullOrEmpty(currentUserEmail))
+                    { *@
+                   <a asp-action="Details" asp-route-id="@item.Booking.Id">Details</a> |
+                   <a asp-action = "Edit" asp - route - id = "@item.Booking.Id" > Edit </a> |
+                   <a asp-action = "Delete" asp - route - id = "@item.Booking.Id" > Delete </a>
+                    @* } *@
+                </td>
+                <td>
+                    @if (item.Booking.Status != "გადასახდელი")
+                    {
+                        <a asp-action="Invoice" asp-route-id="@item.Booking.Id" class="btn btn-success">Invoice</a>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div style="text-align: center;">
+    @{
+        var totalPages = (int)Math.Ceiling((double)(ViewBag.TotalCount ?? 1) / (ViewBag.PageSize ?? 1));
+        var prevDisabled = (ViewBag.Page <= 1) ? "disabled" : "";
+        var nextDisabled = (ViewBag.Page >= totalPages) ? "disabled" : "";
+    }
+
+    <a asp-action="Index"
+       asp-route-page="@(ViewBag.Page - 1)"
+       asp-route-pageSize="@ViewBag.PageSize"
+       class="btn btn-default @(prevDisabled)">
+        Previous
+    </a>
+
+    <span>Page @(ViewBag.Page) of @totalPages</span>
+
+    <a asp-action="Index"
+       asp-route-page="@(ViewBag.Page + 1)"
+       asp-route-pageSize="@ViewBag.PageSize"
+       class="btn btn-default @(nextDisabled)">
+        Next
+    </a>
+</div>
